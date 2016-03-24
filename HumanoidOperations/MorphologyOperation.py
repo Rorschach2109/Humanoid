@@ -24,10 +24,10 @@ class MorphologyOperation(Operation):
             return self._run_morphology_ex(cv.MORPH_CLOSE, kernel)
 
     def _run_erosion(self, kernel, iterations):
-        return cv.erode(self._image, kernel, iterations=iterations)
+        return cv.erode(self._image, kernel, iterations=iterations), self._operation_name + ' -> erosion'
 
     def _run_dilation(self, kernel, iterations):
-        return cv.dilate(self._image, kernel, iterations=iterations)
+        return cv.dilate(self._image, kernel, iterations=iterations), self._operation_name + ' -> dilation'
 
     def _run_morphology_ex(self, op_type, kernel):
-        return cv.morphologyEx(self._image, op_type, kernel)
+        return cv.morphologyEx(self._image, op_type, kernel), self._operation_name + ' -> morphology_ex'

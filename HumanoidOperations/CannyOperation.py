@@ -9,4 +9,4 @@ class CannyOperation(Operation):
     def run_operation(self, **kwargs):
         super(CannyOperation, self).run_operation(**kwargs)
 
-        return cv.Canny(self._image, 100, 200, True)
+        return cv.Canny(self._image, 100, 200, True), self._operation_name

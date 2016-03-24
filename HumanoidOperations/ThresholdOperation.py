@@ -15,4 +15,4 @@ class ThresholdOperation(Operation):
         ret, thresh = cv.threshold(self._image, threshold_bottom_boundary, 255,
                                    cv.THRESH_BINARY_INV if inverse else cv.THRESH_BINARY)
 
-        return thresh
+        return thresh, self._operation_name

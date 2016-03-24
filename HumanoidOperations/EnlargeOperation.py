@@ -13,4 +13,4 @@ class EnlargeOperation(Operation):
         fx = kwargs['fx']
         fy = kwargs['fy']
 
-        return cv.resize(self._image, None, fx=fx, fy=fy, interpolation=cv.INTER_CUBIC)
+        return cv.resize(self._image, None, fx=fx, fy=fy, interpolation=cv.INTER_CUBIC), self._operation_name

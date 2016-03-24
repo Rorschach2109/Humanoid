@@ -20,7 +20,7 @@ class ContourOperation(Operation):
             cv.drawContours(im, contours, contour_index, (255, 255, 255), cv.FILLED)
 
 
-        #return im
+        #return im, self._operation_name
         cv.imshow('copy', img2)
         cv.imshow('find contours', im)
         cv.imshow('subtraction', cv.subtract(im, img2))
